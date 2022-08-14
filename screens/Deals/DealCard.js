@@ -7,7 +7,7 @@ const DealCard = ({ imgUrl, title, price, store, sourceUrl }) => {
   const navigation = useNavigation();
 
   return (
-    <TouchableOpacity className="relative pt-5">
+    <TouchableOpacity className="items-center pt-5">
       <Image
         source={{ uri: imgUrl }}
         className="h-20 w-20 rounded outline-black outline-8 "
