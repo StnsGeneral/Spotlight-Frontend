@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, FlatList } from 'react-native';
 import React from 'react';
 import DealCard from './DealCard';
 
@@ -6,6 +6,7 @@ const Deals = () => {
   return (
     <ScrollView
       vertical
+      // numColumns={2}
       showsVerticalScrollIndicator={false}
       contentContainerStyle={{ paddingHorizontal: 15, paddingTop: 10 }}>
       <DealCard
