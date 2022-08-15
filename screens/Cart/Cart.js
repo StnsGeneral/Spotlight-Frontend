@@ -1,8 +1,10 @@
 import { View, Text, Button, SafeAreaView } from 'react-native';
 import React from 'react';
 import axios from 'axios';
+import { useNavigation } from '@react-navigation/native';
 
 const Cart = () => {
+  const navigation = useNavigation();
   const getData = async () => {
     let url =
       'https://jahjc6ddjg.execute-api.us-east-2.amazonaws.com/Test/carts/';
@@ -47,11 +49,18 @@ const Cart = () => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView
+      style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
         onPress={getData}
         title="Test Data"
         accessibilityLabel="See if backend works"
+      />
+      <Button
+        title="Home"
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
       />
     </SafeAreaView>
   );
