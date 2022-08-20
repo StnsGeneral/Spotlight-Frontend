@@ -22,7 +22,8 @@ export default function App() {
           <TailwindProvider>
             <Stack.Navigator
               screenOptions={{ headerShown: false }}
-              initialRouteName={'Home'}>
+              initialRouteName={'Home'}
+              options={{ headerTitle: (props) => <Header {...props} /> }}>
               <Stack.Group>
                 <Stack.Screen
                   name="Home"
@@ -32,11 +33,7 @@ export default function App() {
                 />
               </Stack.Group>
               <Stack.Group screenOptions={{ presentation: 'card' }}>
-                <Stack.Screen
-                  name="Cart"
-                  component={Cart}
-                  // options={{ headerTitle: (props) => <Header {...props} /> }}
-                />
+                <Stack.Screen name="Cart" component={Cart} />
                 <Stack.Screen name="StorePage" component={StorePage} />
                 <Stack.Screen name="Settings" component={Settings} />
                 <Stack.Screen name="ItemPage" component={ItemPage} />

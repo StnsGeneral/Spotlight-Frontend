@@ -38,7 +38,7 @@ const Footer = () => {
       })}>
       <Tab.Screen name="Deals" component={Deals} />
       <Tab.Screen name="Search" component={Search} />
-      <Tab.Screen name="Map" component={Map} />
+      {/* <Tab.Screen name="Map" component={Map} /> */}
       <Tab.Screen name="Stores" component={Stores} />
       <Tab.Screen name="Menu" component={Menu} />
     </Tab.Navigator>

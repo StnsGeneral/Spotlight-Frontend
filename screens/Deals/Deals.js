@@ -1,6 +1,7 @@
 import { View, Text, ScrollView, FlatList } from 'react-native';
 import React from 'react';
 import DealCard from './DealCard';
+import { DATA } from '../../constants';
 
 const Deals = () => {
   return (
@@ -8,73 +9,25 @@ const Deals = () => {
       vertical
       // numColumns={2}
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ paddingHorizontal: 15, paddingTop: 10 }}>
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
-      <DealCard
-        imgUrl="https://www.doritos.com/sites/doritos.com/files/2018-08/new-nacho-cheese.png"
-        title="Doritos Nacho Cheese"
-        store="Amazon"
-        price="$5.39"
-      />
+      contentContainerStyle={{
+        paddingHorizontal: 15,
+        paddingTop: 10,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        // justifyContent: 'center',
+      }}>
+      {DATA.map((deal) => {
+        return (
+          <DealCard
+            imgUrl={deal.imgUrl}
+            key={deal.id}
+            title={deal.title}
+            store={deal.store}
+            price={deal.price}
+            style={{ width: '50%' }}
+          />
+        );
+      })}
     </ScrollView>
   );
 };
