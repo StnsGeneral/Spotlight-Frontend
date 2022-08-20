@@ -5,47 +5,18 @@ import { useNavigation } from '@react-navigation/native';
 
 const Cart = () => {
   const navigation = useNavigation();
-  const getData = async () => {
-    let url =
-      'https://jahjc6ddjg.execute-api.us-east-2.amazonaws.com/Test/carts/';
-
-    // axios
-    //   .get(
-    //     'https://jahjc6ddjg.execute-api.us-east-2.amazonaws.com/Test/carts/0/1',
-    //     { headers: { 'Access-Control-Allow-Origin': '*' } },
-    //     { crossDomain: true }
-    //   )
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log('Error', err);
-    //   });
-
-    return fetch(url, {
-      method: 'GET',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      crossDomain: true,
-    })
+  const getData = () => {
+    axios
+      .get(
+        'https://jahjc6ddjg.execute-api.us-east-2.amazonaws.com/Test/carts/',
+        { crossDomain: true }
+      )
       .then((res) => {
-        return res;
+        console.log(res.data.Items[0]);
       })
       .catch((err) => {
-        console.error('Error', err);
+        console.log('Error', err);
       });
-
-    // try {
-    //   const res = await fetch(url, {
-    //     headers: 'Access-Control-Allow-Origin: /*/',
-    //   });
-    //   const json = res.json();
-    //   return json;
-    // } catch (error) {
-    //   console.error('Error', error);
-    // }
   };
 
   return (

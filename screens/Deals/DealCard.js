@@ -17,17 +17,17 @@ const DealCard = ({ imgUrl, title, price, store, sourceUrl }) => {
         className="h-20 w-20 rounded outline-black outline-8 "
       />
       <View className="flex-row items-center justify-around">
-        <Text className="font-bold text-black text-lg">{title}</Text>
-        <Text>{store}</Text>
+        <Text className="font-bold text-black">{title}</Text>
+        <Text className=" font-light text-xs">{store}</Text>
       </View>
       <View className="flex-row items-center justify-around">
         <Text className="text-2xl">{price}</Text>
-        <View className="h-15 w-30 bg-sky-900 rounded">
+        <View className="w-12 bg-sky-900 rounded items-center">
           <ShoppingCartIcon
             onPress={() => {
               navigation.navigate('Cart');
             }}
-            color="black"
+            color="white"
           />
         </View>
       </View>
