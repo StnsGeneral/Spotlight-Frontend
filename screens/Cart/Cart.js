@@ -2,9 +2,11 @@ import { View, Text, Button, SafeAreaView } from 'react-native';
 import React from 'react';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
 
 const Cart = () => {
   const navigation = useNavigation();
+  const [cart, setCart] = useState(null);
   const getData = () => {
     axios
       .get(
@@ -12,7 +14,8 @@ const Cart = () => {
         { crossDomain: true }
       )
       .then((res) => {
-        console.log(res.data.Items[0]);
+        setCart(res.data.Items);
+        console.log(res.data.Items);
       })
       .catch((err) => {
         console.log('Error', err);
@@ -33,6 +36,7 @@ const Cart = () => {
           navigation.navigate('Home');
         }}
       />
+      {cart && <Text>{cart[0].CartID}</Text>}
     </SafeAreaView>
   );
 };
