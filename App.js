@@ -11,6 +11,7 @@ import Settings from './screens/Menu/Settings';
 import Header from './components/Header';
 import ItemPage from './screens/Deals/ItemPage';
 import SearchPage from './screens/Search/SearchPage';
+import Deals from './screens/Deals/Deals';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,12 +26,8 @@ export default function App() {
               initialRouteName={'Home'}
               options={{ headerTitle: (props) => <Header {...props} /> }}>
               <Stack.Group>
-                <Stack.Screen
-                  name="Home"
-                  component={HomeScreen}
-
-                  // options={{ headerTitle: (props) => <Header {...props} /> }}
-                />
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Deals" component={Deals} />
               </Stack.Group>
               <Stack.Group screenOptions={{ presentation: 'card' }}>
                 <Stack.Screen name="Cart" component={Cart} />

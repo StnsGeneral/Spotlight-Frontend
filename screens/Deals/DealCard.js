@@ -3,11 +3,12 @@ import React from 'react';
 import { ShoppingCartIcon } from 'react-native-heroicons/outline';
 import { useNavigation } from '@react-navigation/native';
 
-const DealCard = ({ imgUrl, title, price, store, sourceUrl }) => {
+const DealCard = ({ imgUrl, title, price, store, sourceUrl, id }) => {
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity
+      key={id}
       className="items-center pt-5"
       onPress={() => {
         navigation.navigate('ItemPage');
