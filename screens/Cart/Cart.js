@@ -10,12 +10,12 @@ const Cart = () => {
   const getData = () => {
     axios
       .get(
-        'https://jahjc6ddjg.execute-api.us-east-2.amazonaws.com/Test/carts/',
+        'https://jahjc6ddjg.execute-api.us-east-2.amazonaws.com/Test/carts/0/1',
         { crossDomain: true }
       )
       .then((res) => {
-        setCart(res.data.Items);
-        console.log(res.data.Items);
+        setCart(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log('Error', err);
@@ -36,7 +36,7 @@ const Cart = () => {
           navigation.navigate('Home');
         }}
       />
-      {cart && <Text>{cart[0].CartID}</Text>}
+      {cart && <Text>{cart.Item.Items}</Text>}
     </SafeAreaView>
   );
 };
