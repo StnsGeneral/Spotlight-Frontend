@@ -39,7 +39,7 @@ const STORES = [
     id: 7,
     storeName: 'Alibaba',
     logoURL:
-      'https://brandslogos.com/wp-content/uploads/images/large/alibaba-com-logo.png',
+      'https://1000logos.net/wp-content/uploads/2018/10/Alibaba-Logo.png',
   },
   {
     id: 8,
