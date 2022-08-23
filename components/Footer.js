@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Search from '../screens/Search/Search';
@@ -14,6 +13,7 @@ const Footer = () => {
   return (
     <Tab.Navigator
       initialRouteName="Deals"
+      backBehavior="history"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -35,10 +35,11 @@ const Footer = () => {
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
         headerShown: false,
+        tabBarStyle: { backgroundColor: '#0C4A6E' },
       })}>
       <Tab.Screen name="Deals" component={Deals} />
       <Tab.Screen name="Search" component={Search} />
-      {/* <Tab.Screen name="Map" component={Map} /> */}
+      <Tab.Screen name="Map" component={Map} />
       <Tab.Screen name="Stores" component={Stores} />
       <Tab.Screen name="Menu" component={Menu} />
     </Tab.Navigator>
