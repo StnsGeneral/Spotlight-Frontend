@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { setSelectedTab } from '../stores/tab/tabActions';
 import { Header, Footer } from '../components';
 
-const HomeScreen = ({ selectedTab, setSelectedTab }) => {
+const HomeScreen = ({ selectedTab, setSelectedTab, navigation }) => {
   return (
-    <View className="flex-1 bg-white">
+    <View className="flex-1 w-screen bg-white">
       {/* {Header} */}
       <Header />
 
