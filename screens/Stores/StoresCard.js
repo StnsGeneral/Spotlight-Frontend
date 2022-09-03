@@ -6,8 +6,14 @@ const StoresCard = ({ store, imgUrl }) => {
   const navigation = useNavigation();
 
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('StorePage')}>
-      <View className="items-center mt-3 flex-1 m-10 border h-20 w-36 rounded justify-center">
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate('StorePage', {
+          store: [store.Id, store.imgUrl, store.storeName],
+        })
+      }
+      className="items-center justify-center flex-1 mt-4">
+      <View className="items-center flex-1 border h-20 w-40 rounded justify-center bg-gray-200">
         <Image source={{ uri: imgUrl }} style={styles.logo} />
       </View>
     </TouchableOpacity>
