@@ -1,30 +1,32 @@
-import { ScrollView, SafeAreaView } from 'react-native';
+import { SafeAreaView, FlatList, TouchableOpacity, Text } from 'react-native';
 import React from 'react';
-import SearchCard from './SearchCard';
 import { GENRES } from '../../constants/';
+import { useNavigation } from '@react-navigation/native';
 
 const Search = () => {
+  const navigation = useNavigation();
+
+  const SearchCard = ({ item }) => {
+    return (
+      <TouchableOpacity
+        className="items-center justify-center p-4 m-4 border-8 border-sky-900 flex-1"
+        onPress={() => {
+          navigation.navigate('SearchPage', { item: [item.id, item.genre] });
+        }}>
+        <Text>{item.genre}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
     <SafeAreaView>
-      <ScrollView
-        vertical
+      <FlatList
+        data={GENRES}
+        numColumns={2}
+        renderItem={SearchCard}
+        keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{
-          paddingHorizontal: 15,
-          paddingTop: 10,
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-        }}>
-        {GENRES.map((store) => {
-          return (
-            <SearchCard
-              key={store.id}
-              genre={store.genre}
-              style={{ width: '50%' }}
-            />
-          );
-        })}
-      </ScrollView>
+      />
     </SafeAreaView>
   );
 };

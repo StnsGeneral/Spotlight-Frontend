@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Button } from 'react-native';
+import { Text, SafeAreaView, Button } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
