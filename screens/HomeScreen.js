@@ -4,17 +4,17 @@ import { connect } from 'react-redux';
 import { setSelectedTab } from '../stores/tab/tabActions';
 import { Header, Footer } from '../components';
 
-const HomeScreen = ({ selectedTab, setSelectedTab, navigation}) => {
+const HomeScreen = ({ selectedTab, setSelectedTab }) => {
   return (
     <View className="flex-1 w-screen bg-white">
       {/* {Header} */}
-      <Header />
+      <Header selectedTab={selectedTab} />
 
       {/* {Content} */}
       {/* Auto rendered through the footer component */}
 
       {/* {Footer} */}
-      <Footer  />
+      <Footer setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
     </View>
   );
 };

@@ -7,7 +7,6 @@ const StorePage = ({ route }) => {
   const storeId = route.params.item[0];
   const storeLogoUrl = route.params.item[1];
   const storeName = route.params.item[2];
-  console.log(route);
 
   return (
     <SafeAreaView
