@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { setSelectedTab } from '../stores/tab/tabActions';
 import { Header, Footer } from '../components';
 
-const HomeScreen = ({ selectedTab, setSelectedTab, navigation}) => {
+const HomeScreen = ({ selectedTab, setSelectedTab }) => {
   return (
     <View className="flex-1 w-screen bg-white">
       {/* {Header} */}
@@ -14,7 +14,7 @@ const HomeScreen = ({ selectedTab, setSelectedTab, navigation}) => {
       {/* Auto rendered through the footer component */}
 
       {/* {Footer} */}
-      <Footer  />
+      <Footer />
     </View>
   );
 };
