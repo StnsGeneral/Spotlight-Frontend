@@ -27,6 +27,50 @@ const GENRES = [
     id: 7,
     genre: 'Gaming',
   },
+  {
+    id: 8,
+    genre: 'Gaming',
+  },
+  {
+    id: 9,
+    genre: 'Gaming',
+  },
+  {
+    id: 10,
+    genre: 'Gaming',
+  },
+  {
+    id: 11,
+    genre: 'Gaming',
+  },
+  {
+    id: 12,
+    genre: 'Gaming',
+  },
+  {
+    id: 13,
+    genre: 'Gaming',
+  },
+  {
+    id: 14,
+    genre: 'Gaming',
+  },
+  {
+    id: 15,
+    genre: 'Gaming',
+  },
+  {
+    id: 16,
+    genre: 'Gaming',
+  },
+  {
+    id: 17,
+    genre: 'Gaming',
+  },
+  {
+    id: 18,
+    genre: 'Gaming',
+  },
 ];
 
 export default GENRES;

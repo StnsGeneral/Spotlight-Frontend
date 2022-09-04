@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import React from 'react';
 import { STORES } from '../../constants';
-// import StoresCard from './StoresCard';
 import { useNavigation } from '@react-navigation/native';
 
 const Stores = () => {
