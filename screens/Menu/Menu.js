@@ -40,7 +40,7 @@ const Menu = () => {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('Settings');
+          navigation.navigate('Calendar');
         }}>
         <View className="flex-1 justify-center h-20 m-5 bg-gray-300 pl-3">
           <Text>Calendar</Text>
