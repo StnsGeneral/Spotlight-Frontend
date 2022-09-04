@@ -18,7 +18,17 @@ const Deals = () => {
     return (
       <View className="w-1/2 px-6">
         <TouchableOpacity
-          onPress={() => navigation.navigate('ItemPage')}
+          onPress={() =>
+            navigation.navigate('ItemPage', {
+              item: [
+                item.itemId,
+                item.title,
+                item.imgUrl,
+                item.price,
+                item.store,
+              ],
+            })
+          }
           className="items-center pt-5">
           <Image
             source={{ uri: item.imgUrl }}
@@ -54,7 +64,7 @@ const Deals = () => {
         data={DATA}
         numColumns={2}
         renderItem={DealCard}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.itemId}
         showsVerticalScrollIndicator={false}
       />
     </SafeAreaView>

@@ -30,7 +30,11 @@ export default function App() {
                 <Stack.Screen name="Deals" component={Deals} />
               </Stack.Group>
               <Stack.Group screenOptions={{ presentation: 'card' }}>
-                <Stack.Screen name="ItemPage" component={ItemPage} />
+                <Stack.Screen
+                  name="ItemPage"
+                  component={ItemPage}
+                  getId={({ params }) => params.itemId}
+                />
                 <Stack.Screen name="Cart" component={Cart} />
                 <Stack.Screen name="StorePage" component={StorePage} />
                 <Stack.Screen name="Settings" component={Settings} />

@@ -5,7 +5,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 1,
+    itemId: 1,
   },
   {
     imgUrl:
@@ -13,7 +13,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 2,
+    itemId: 2,
   },
   {
     imgUrl:
@@ -21,7 +21,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 3,
+    itemId: 3,
   },
   {
     imgUrl:
@@ -29,7 +29,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 4,
+    itemId: 4,
   },
   {
     imgUrl:
@@ -37,7 +37,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 5,
+    itemId: 5,
   },
   {
     imgUrl:
@@ -45,7 +45,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 6,
+    itemId: 6,
   },
   {
     imgUrl:
@@ -53,7 +53,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 7,
+    itemId: 7,
   },
   {
     imgUrl:
@@ -61,7 +61,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 8,
+    itemId: 8,
   },
   {
     imgUrl:
@@ -69,7 +69,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 9,
+    itemId: 9,
   },
   {
     imgUrl:
@@ -77,7 +77,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 10,
+    itemId: 10,
   },
   {
     imgUrl:
@@ -85,7 +85,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 11,
+    itemId: 11,
   },
   {
     imgUrl:
@@ -93,7 +93,7 @@ export const DATA = [
     title: 'Doritos Nacho Cheese',
     store: 'Amazon',
     price: '$5.39',
-    id: 12,
+    itemId: 12,
   },
 ];
 
