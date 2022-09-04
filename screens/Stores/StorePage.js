@@ -2,8 +2,13 @@ import { View, Text, SafeAreaView, Button } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-const StorePage = () => {
+const StorePage = ({ route }) => {
   const navigation = useNavigation();
+  const storeId = route.params.item[0];
+  const storeLogoUrl = route.params.item[1];
+  const storeName = route.params.item[2];
+  console.log(route);
+
   return (
     <SafeAreaView
       style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -13,10 +18,15 @@ const StorePage = () => {
       </Text>
       <Button
         onPress={() => {
-          navigation.navigate('Home');
+          navigation.goBack();
         }}
-        title="Home"
+        title="Go back"
       />
+      <Text>{storeName}</Text>
+      <Text>
+        All data is being sent down the file structure. I just have the name of
+        the store updating at this time.
+      </Text>
     </SafeAreaView>
   );
 };

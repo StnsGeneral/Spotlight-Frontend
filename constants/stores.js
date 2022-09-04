@@ -53,6 +53,48 @@ const STORES = [
     logoURL:
       'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
   },
+  {
+    id: 10,
+    storeName: 'Walgreens',
+    logoURL:
+      'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
+  },
+  {
+    id: 11,
+    storeName: 'Walgreens',
+    logoURL:
+      'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
+  },
+  {
+    id: 12,
+    storeName: 'Walgreens',
+    logoURL:
+      'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
+  },
+  {
+    id: 13,
+    storeName: 'Walgreens',
+    logoURL:
+      'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
+  },
+  {
+    id: 14,
+    storeName: 'Walgreens',
+    logoURL:
+      'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
+  },
+  {
+    id: 15,
+    storeName: 'Walgreens',
+    logoURL:
+      'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
+  },
+  {
+    id: 16,
+    storeName: 'Walgreens',
+    logoURL:
+      'https://www.walgreens.com/images/adaptive/si/1485908_WAG_Signature_logo_RGB_750x208.png',
+  },
 ];
 
 export default STORES;
