@@ -6,13 +6,8 @@ import Cart from './screens/Cart/Cart';
 import { Provider } from 'react-redux';
 import store from './stores/configureStore';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import StorePage from './screens/Stores/StorePage';
 import Settings from './screens/Menu/Settings';
 import Header from './components/Header';
-import ItemPage from './screens/Deals/ItemPage';
-import SearchPage from './screens/Search/SearchPage';
-import Deals from './screens/Deals/Deals';
-import CalendarPage from './screens/Menu/Pages/Calendar';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +23,6 @@ export default function App() {
               options={{ headerTitle: (props) => <Header {...props} /> }}>
               <Stack.Group>
                 <Stack.Screen name="Home" component={HomeScreen} />
-                <Stack.Screen name="Deals" component={Deals} />
               </Stack.Group>
               <Stack.Group screenOptions={{ presentation: 'card' }}>
                 <Stack.Screen name="Cart" component={Cart} />

@@ -6,7 +6,7 @@ import { Header, Footer } from '../components';
 
 const HomeScreen = ({ selectedTab, setSelectedTab }) => {
   return (
-    <View className="flex-1 w-screen bg-white">
+    <View className="flex-1 bg-white">
       {/* {Header} */}
       <Header selectedTab={selectedTab} />
 
