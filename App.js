@@ -12,6 +12,7 @@ import Header from './components/Header';
 import ItemPage from './screens/Deals/ItemPage';
 import SearchPage from './screens/Search/SearchPage';
 import Deals from './screens/Deals/Deals';
+import CalendarPage from './screens/Menu/Pages/Calendar';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,15 +31,8 @@ export default function App() {
                 <Stack.Screen name="Deals" component={Deals} />
               </Stack.Group>
               <Stack.Group screenOptions={{ presentation: 'card' }}>
-                <Stack.Screen
-                  name="ItemPage"
-                  component={ItemPage}
-                  getId={({ params }) => params.itemId}
-                />
                 <Stack.Screen name="Cart" component={Cart} />
-                <Stack.Screen name="StorePage" component={StorePage} />
                 <Stack.Screen name="Settings" component={Settings} />
-                <Stack.Screen name="SearchPage" component={SearchPage} />
               </Stack.Group>
             </Stack.Navigator>
           </TailwindProvider>

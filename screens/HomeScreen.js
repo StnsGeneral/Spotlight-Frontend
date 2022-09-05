@@ -14,7 +14,8 @@ const HomeScreen = ({ selectedTab, setSelectedTab }) => {
       {/* Auto rendered through the footer component */}
 
       {/* {Footer} */}
-      <Footer setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
+      <Footer />
+
     </View>
   );
 };
