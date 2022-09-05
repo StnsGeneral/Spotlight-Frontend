@@ -8,9 +8,9 @@ const Settings = () => {
     <View className="items-center justify-center flex-1">
       <Text>Place Holder</Text>
       <Button
-        title="Home"
+        title="Go back"
         onPress={() => {
-          navigation.navigate('Home');
+          navigation.goBack();
         }}
       />
     </View>

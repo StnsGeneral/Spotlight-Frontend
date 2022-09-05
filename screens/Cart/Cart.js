@@ -24,19 +24,23 @@ const Cart = () => {
 
   return (
     <SafeAreaView
-      style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
       <Button
         onPress={getData}
         title="Test Data"
         accessibilityLabel="See if backend works"
       />
       <Button
-        title="Home"
+        title="Go back"
         onPress={() => {
-          navigation.navigate('Home');
+          navigation.goBack();
         }}
       />
-      {cart && <Text>{cart.Item.Items}</Text>}
+      {cart && <Text>Item Id: {cart.Item.Items}</Text>}
     </SafeAreaView>
   );
 };
