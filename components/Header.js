@@ -15,13 +15,13 @@ const Header = ({ title }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
-    <SafeAreaView className="bg-sky-900 pt-6 flex-row w-full items-center">
+    <SafeAreaView className="bg-sky-900 pt-8 flex-row items-center">
       <Modal
         animationType="slide"
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => setModalVisible(!modalVisible)}>
-        <View className="bg-gray-300 rounded border w-2/3 flex-col items-end p-2 ml-32">
+        <View className="bg-gray-300 rounded border w-2/3 flex-col items-end p-2 ml-28 mt-12">
           <Pressable
             className="bg-sky-900 border rounded items-center w-4"
             onPress={() => setModalVisible(!modalVisible)}>
