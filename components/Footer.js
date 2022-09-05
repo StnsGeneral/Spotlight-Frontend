@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { TouchableOpacity } from 'react-native';
 import Search from '../screens/Search/Search';
 import Deals from '../screens/Deals/Deals';
 import Map from '../screens/Map/Map';
@@ -13,7 +14,7 @@ import StorePage from '../screens/Stores/StorePage';
 
 const Tab = createBottomTabNavigator();
 
-const Footer = () => {
+const Footer = ({ selectedTab, setSelectedTab }) => {
   return (
     <Tab.Navigator
       initialRouteName="Deals"

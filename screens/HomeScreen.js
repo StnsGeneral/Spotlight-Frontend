@@ -8,13 +8,14 @@ const HomeScreen = ({ selectedTab, setSelectedTab }) => {
   return (
     <View className="flex-1 w-screen bg-white">
       {/* {Header} */}
-      <Header />
+      <Header selectedTab={selectedTab} />
 
       {/* {Content} */}
       {/* Auto rendered through the footer component */}
 
       {/* {Footer} */}
       <Footer />
+
     </View>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import { CurrencyDollarIcon, VolumeUpIcon } from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 
-const Header = ({ title }) => {
+const Header = ({ selectedScreen }) => {
   const navigation = useNavigation();
 
   return (
