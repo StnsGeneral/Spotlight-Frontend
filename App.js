@@ -29,18 +29,10 @@ export default function App() {
               <Stack.Group>
                 <Stack.Screen name="Home" component={HomeScreen} />
                 <Stack.Screen name="Deals" component={Deals} />
-                <Stack.Screen name="Calendar" component={CalendarPage} />
               </Stack.Group>
               <Stack.Group screenOptions={{ presentation: 'card' }}>
-                <Stack.Screen
-                  name="ItemPage"
-                  component={ItemPage}
-                  getId={({ params }) => params.itemId}
-                />
                 <Stack.Screen name="Cart" component={Cart} />
-                <Stack.Screen name="StorePage" component={StorePage} />
                 <Stack.Screen name="Settings" component={Settings} />
-                <Stack.Screen name="SearchPage" component={SearchPage} />
               </Stack.Group>
             </Stack.Navigator>
           </TailwindProvider>
