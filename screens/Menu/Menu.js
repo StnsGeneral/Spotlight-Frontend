@@ -12,7 +12,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Menu = () => {
   const navigation = useNavigation();
   return (
-    <ScrollView>
+    <ScrollView
+    // showsVerticalScrollIndicator={false}
+    >
       <TouchableOpacity
         onPress={() => {
           navigation.navigate('Settings');
