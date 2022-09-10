@@ -12,6 +12,7 @@ import { DATA, CART } from '../../constants';
 import { useNavigation } from '@react-navigation/native';
 import { ShoppingCartIcon } from 'react-native-heroicons/solid';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Icon } from '@rneui/base';
 
 const Deals = () => {
   const navigation = useNavigation();
@@ -76,10 +77,14 @@ const Deals = () => {
           setContentVerticalOffset(event.nativeEvent.contentOffset.y);
         }}
       />
+
       {contentVerticalOffset > CONTENT_OFFSET_THRESHOLD && (
-        <Ionicons
-          name="chevron-up-outline"
-          size={22}
+        <Icon
+          name="north"
+          type="material"
+          raised
+          reverse
+          color="teal"
           containerStyle={styles.scrollTopButton}
           onPress={() => {
             listRef.current.scrollToOffset({ offset: 0, animated: true });
@@ -95,7 +100,7 @@ export default Deals;
 const styles = StyleSheet.create({
   scrollTopButton: {
     position: 'absolute',
-    bottom: 0,
-    right: 0,
+    bottom: 30,
+    right: 10,
   },
 });
