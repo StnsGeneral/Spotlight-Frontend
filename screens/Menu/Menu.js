@@ -8,6 +8,7 @@ import {
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Avatar } from '@rneui/themed';
 
 const Menu = () => {
   const navigation = useNavigation();
@@ -20,7 +21,16 @@ const Menu = () => {
           navigation.navigate('Settings');
         }}>
         <View className="flex-1 flex-row h-36 items-center m-5 justify-center bg-gray-200">
-          <Ionicons name="person-circle" size={50} />
+          {/* <Ionicons name="person-circle" size={50} /> */}
+          <Avatar
+            size={64}
+            rounded
+            icon={{
+              name: 'person-circle-outline',
+              type: 'ionicon',
+              color: 'black',
+            }}
+          />
           <Text>Profile Container</Text>
         </View>
       </TouchableOpacity>

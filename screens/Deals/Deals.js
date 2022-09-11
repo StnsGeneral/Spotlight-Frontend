@@ -11,7 +11,7 @@ import React, { useRef, useState } from 'react';
 import { DATA, CART } from '../../constants';
 import { useNavigation } from '@react-navigation/native';
 import { ShoppingCartIcon } from 'react-native-heroicons/solid';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+// import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Icon } from '@rneui/base';
 
 const Deals = () => {
@@ -47,11 +47,11 @@ const Deals = () => {
           <View className="flex-row items-center justify-around">
             <Text className="text-2xl pr-3">{item.price}</Text>
             <View className="w-12 bg-sky-900 rounded items-center">
-              <ShoppingCartIcon
-                onPress={() => {
-                  CART.push(item);
-                }}
-                color="white"
+              <Icon
+                name="add-shopping-cart"
+                type="material"
+                size={22}
+                onPress={() => CART.push(item)}
               />
             </View>
           </View>
@@ -100,7 +100,7 @@ export default Deals;
 const styles = StyleSheet.create({
   scrollTopButton: {
     position: 'absolute',
-    bottom: 30,
+    bottom: 10,
     right: 10,
   },
 });

@@ -10,10 +10,13 @@ import CalendarPage from '../screens/Menu/Pages/Calendar';
 import SearchPage from '../screens/Search/SearchPage';
 import ItemPage from '../screens/Deals/ItemPage';
 import StorePage from '../screens/Stores/StorePage';
+import { setSelectedTab, selectedTab } from '../stores/tab/tabActions';
+import { connect } from 'react-redux';
+import { Icon } from '@rneui/base';
 
 const Tab = createBottomTabNavigator();
 
-const Footer = () => {
+const Footer = ({ setSelectedTab }) => {
   return (
     <Tab.Navigator
       initialRouteName="Deals"
@@ -23,18 +26,23 @@ const Footer = () => {
           let iconName;
 
           if (route.name === 'Deals') {
+            // setSelectedTab('deals');
             iconName = focused ? 'cart-sharp' : 'cart-outline';
           } else if (route.name === 'Search') {
+            // setSelectedTab('search');
             iconName = focused ? 'search-sharp' : 'search-outline';
           } else if (route.name == 'Map') {
+            // setSelectedTab('map');
             iconName = focused ? 'map-sharp' : 'map-outline';
           } else if (route.name == 'Stores') {
+            // setSelectedTab('stores');
             iconName = focused ? 'laptop-sharp' : 'laptop-outline';
           } else if (route.name == 'Menu') {
+            // setSelectedTab('menu');
             iconName = focused ? 'menu-sharp' : 'menu-outline';
           }
 
-          return <Ionicons name={iconName} size={22} />;
+          return <Icon name={iconName} size={22} type="ionicon" />;
         },
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
@@ -75,4 +83,18 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+function mapStateToProps(state) {
+  return {
+    selectedTab: state.tabReducer.selectedTab,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setSelectedTab: (selectedTab) => {
+      return dispatch(setSelectedTab(selectedTab));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

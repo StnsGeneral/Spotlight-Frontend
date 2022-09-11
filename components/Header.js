@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Image,
   FlatList,
+  Dimensions,
 } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import {
@@ -16,10 +17,21 @@ import {
 } from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 import { USER, CART } from '../constants';
+import { SearchBar } from '@rneui/themed';
+import { connect } from 'react-redux';
+import { selectedTab, setSelectedTab } from '../stores/tab/tabActions';
+import { Icon } from '@rneui/base';
 
 const Header = ({ title }) => {
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
+  const [search, setSearch] = useState('');
+  const windowWidth = Dimensions.get('window').width;
+  const windowHeight = Dimensions.get('window').height;
+
+  const updateSearch = (search) => {
+    setSearch(search);
+  };
 
   const CartItem = ({ item }) => {
     const index = CART.indexOf(item);
@@ -45,7 +57,7 @@ const Header = ({ title }) => {
   };
 
   return (
-    <SafeAreaView className="bg-sky-900 pt-8 flex-row items-center">
+    <SafeAreaView className="bg-sky-900 pt-8 items-center">
       <Modal
         animationType="slide"
         transparent={true}
@@ -82,14 +94,16 @@ const Header = ({ title }) => {
       <View className="flex-row items-center mx-2 space-x-3 pb-2">
         <View className="flex-row flex-1 space-x-5 items-center">
           <Text className="text-2xl text-white">Spotlight</Text>
-          <Text className="text-sm font-bold text-black">$ {USER.wallet}</Text>
+          <Text className="text-sm font-bold text-black">
+            <Icon name="dollar" type="foundation" size={15} /> {USER.wallet}
+          </Text>
 
           <Text className="text-sm font-bold text-black">
-            <CurrencyDollarIcon size={20} color="black" /> {USER.points}
+            <Icon name="trophy" type="foundation" size={15} /> {USER.points}
           </Text>
 
           <View className="h-7 w-7 rounded-full bg-gray-300 justify-center items-center">
-            <VolumeUpIcon size={15} color="black" />
+            <Icon name="volume" type="foundation" size={18} />
           </View>
         </View>
 
@@ -99,10 +113,41 @@ const Header = ({ title }) => {
           </Pressable>
         </View>
       </View>
+
+      <View className="mb-2">
+        <SearchBar
+          placeholder="Search"
+          value={search}
+          onChangeText={updateSearch}
+          lightTheme
+          round
+          containerStyle={{
+            width: windowWidth,
+            backgroundColor: null,
+            height: 48,
+          }}
+          inputContainerStyle={{ height: 10 }}
+        />
+      </View>
     </SafeAreaView>
   );
 };
 
+// function mapStateToProps(state) {
+//   return {
+//     selectedTab: state.tabReducer.selectedTab,
+//   };
+// }
+
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     setSelectedTab: (selectedTab) => {
+//       return dispatch(setSelectedTab(selectedTab));
+//     },
+//   };
+// }
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Header);
 export default Header;
 
 const styles = StyleSheet.create({
